@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "759039d3-e82e-46c5-8df7-a936a74541cc",
+		"name": "V-PATROL_AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31451527"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n       \"username\": \"Monu\",\n       \"password\": \"Monu@123\",\n       \"role\": \"customer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n       \"username\": \"Monu\",\n       \"password\": \"Monu@123\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWViOGQxMGMyODRkMTI3OWJkZTUwMSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NDM2OTg5NTcsImV4cCI6MTc0Mzc4NTM1N30.ZJOV18mmtSWiI9-MjjD69dSq7SFV78TMOi-6c34FPC0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n       \"name\": \"Product Name 2\",\n       \"price\": 100,\n       \"stock\": 50,\n       \"category\": \"Category Name 2\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWViOGQxMGMyODRkMTI3OWJkZTUwMSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NDM2OTg5NTcsImV4cCI6MTc0Mzc4NTM1N30.ZJOV18mmtSWiI9-MjjD69dSq7SFV78TMOi-6c34FPC0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n       \"name\": \"Updated Product Name\",\n       \"price\": 150,\n       \"stock\": 30,\n       \"category\": \"Updated Category Name\"\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products/67eebd581cf5db4f4d7ccb41",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67eebd581cf5db4f4d7ccb41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWViOGQxMGMyODRkMTI3OWJkZTUwMSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NDM2OTg5NTcsImV4cCI6MTc0Mzc4NTM1N30.ZJOV18mmtSWiI9-MjjD69dSq7SFV78TMOi-6c34FPC0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/products/67eebd581cf5db4f4d7ccb41",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67eebd581cf5db4f4d7ccb41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWVjMjg5MWNmNWRiNGY0ZDdjY2I0ZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0MzcwMDYyNCwiZXhwIjoxNzQzNzg3MDI0fQ.jXQ2JECNZ4_qtx4liUcIvboRV2-3OxHifGXswN5OBWY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\n       \"items\": [\n         {\n           \"productId\": \"67eec2061cf5db4f4d7ccb4a\",\n           \"quantity\": 1\n         }\n       ]\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revenue Per Vendor",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Top Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Average Order Value",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Daily Sales for Vendor",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Low Stock Items",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
